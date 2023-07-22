@@ -17,6 +17,7 @@ class OrderPage(BasePage):
         self.input_element(OrderPageLocators.LOCATOR_LAST_NAME, user_last_name)
         self.input_element(OrderPageLocators.LOCATOR_ADDRESS, user_address)
         self.click_element(OrderPageLocators.LOCATOR_STATION)
+        self.find_visibility_element(OrderPageLocators.STATION_DROPDOWN)
         self.click_element(OrderPageLocators.STATION_DROPDOWN)
         self.input_element(OrderPageLocators.LOCATOR_PHONE_NUMBER, user_phone)
         self.find_clickable_element(OrderPageLocators.NEXT_BUTTON)

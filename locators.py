@@ -35,6 +35,13 @@ class OrderPageLocators:
     COOKIES_BUTTON = (By.ID, 'rcc-confirm-button')  # Кнопка "да все привыкли"
     BUTTON_ORDER_ON_THE_PAGE = (By.XPATH, "//div[@class = 'Home_FinishButton__1_cWm']/button[text()='Заказать']") # Кнопка "Заказать" на главной странице
 
+    '''Локаторы Ошибки заполнения формы'''
+
+    INCORRECT_FIRST_NAME = [By.XPATH, ".//input[contains(@placeholder,'Имя')]/parent::div/div"]  # Текст ошибки неправильного имени
+    INCORRECT_LAST_NAME = [By.XPATH, ".//input[contains(@placeholder,'Фамилия')]/parent::div/div"]  # Текст ошибки неправильной фамилии
+    INCORRECT_ADDRESS = [By.XPATH, ".//input[contains(@placeholder,'Адрес')]/parent::div/div"]  # Текст ошибки адреса
+    INCORRECT_PHONE_NUMBER = [By.XPATH, ".//input[contains(@placeholder,'Телефон')]/parent::div/div"]  # Текст ошибки номера телефона
+
     ''' Локаторы формы "Для кого самокат?" '''
 
     LOCATOR_NAME = (By.XPATH, "//input[@placeholder='* Имя']")  # Поле ввода имени

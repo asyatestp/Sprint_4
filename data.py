@@ -28,9 +28,26 @@ class DataForm:
     DATE_TIME = datetime.date.today().strftime('%d.%m.%Y')
     COMMENT = 'ТЕСТ'
 
-    ''''''
+
+    ''' Логотип в шапке '''
+
     SUCCESSFUL_ORDER_TEXT = 'Заказ оформлен'
     LOGO = 'Самокат'
+
+class DataFormIncorrect:
+
+    INCORRECT_FIRST_NAME = 'Test'
+    INCORRECT_LAST_NAME = 'Test'
+    INCORRECT_ADDRESS = 'Test'
+    INCORRECT_PHONE_NUMBER = '1234'
+
+    TEXT_NEGATIVE_FIRST_NAME = 'Введите корректное имя'
+    TEXT_NEGATIVE_LAST_NAME = 'Введите корректную фамилию'
+    TEXT_NEGATIVE_ADRESS = 'Введите корректный адрес'
+    TEXT_NEGATIVE_PHONE_NUMBER = 'Введите корректный номер'
+
+
+
 
 
 

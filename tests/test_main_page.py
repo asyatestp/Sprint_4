@@ -21,7 +21,7 @@ class TestFaq:
     @allure.title('Проверка открытия ответа по клику на вопрос')
     def test_expand_faq_by_click_answer_expanded(self, driver, faq_locator, answer_locator, answer):
         main_page = MainPage(driver)
-        main_page.scroll_to_faq()
+        main_page.scroll_to_element(MainPageLocators.LOCATOR_FAQ)
         main_page.click_cookie_button()
         assert main_page.check_answer_on_faq(faq_locator, answer_locator) == answer
 

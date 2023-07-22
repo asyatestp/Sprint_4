@@ -1,5 +1,10 @@
+from faker import Faker
+import random
+import datetime
 
 class Answers:
+
+    ''' Ответы на вопросы '''
 
     answer1 = "Сутки — 400 рублей. Оплата курьеру — наличными или картой."
     answer2 = "Пока что у нас так: один заказ — один самокат. Если хотите покататься с друзьями, можете просто сделать несколько заказов — один за другим."
@@ -9,3 +14,23 @@ class Answers:
     answer6 = "Самокат приезжает к вам с полной зарядкой. Этого хватает на восемь суток — даже если будете кататься без передышек и во сне. Зарядка не понадобится."
     answer7 = "Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои."
     answer8 = "Да, обязательно. Всем самокатов! И Москве, и Московской области."
+
+
+class DataForm:
+
+    ''' Форма заказа '''
+
+    fake = Faker(locale="ru_RU")
+    USER_FIRST_NAME = fake.first_name()
+    USER_LAST_NAME = fake.last_name()
+    USER_ADDRESS = 'Москва'  #fake.address()
+    USER_PHONE = random.randint(79000000000, 79999999999)
+    DATE_TIME = datetime.date.today().strftime('%d.%m.%Y')
+    COMMENT = 'ТЕСТ'
+
+    ''''''
+    SUCCESSFUL_ORDER_TEXT = 'Заказ оформлен'
+    LOGO = 'Самокат'
+
+
+

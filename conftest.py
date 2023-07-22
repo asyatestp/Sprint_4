@@ -1,6 +1,5 @@
 import pytest
 from selenium import webdriver
-from faker import Faker
 @pytest.fixture
 def driver():
     driver = webdriver.Firefox()
@@ -8,8 +7,3 @@ def driver():
     yield driver
     driver.quit()
 
-
-@pytest.fixture
-def fake():
-    faker = Faker()
-    return faker

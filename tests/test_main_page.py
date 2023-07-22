@@ -22,7 +22,7 @@ class TestFaq:
     def test_expand_faq_by_click_answer_expanded(self, driver, faq_locator, answer_locator, answer):
         main_page = MainPage(driver)
         main_page.scroll_to_element(MainPageLocators.LOCATOR_FAQ)
-        main_page.click_cookie_button()
+        main_page.click_element(MainPageLocators.COOKIES_BUTTON)
 
         assert main_page.check_answer_on_faq(faq_locator, answer_locator) == answer
 

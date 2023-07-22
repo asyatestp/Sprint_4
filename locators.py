@@ -66,12 +66,20 @@ class OrderPageLocators:
     ORDER_PLACED = (By.XPATH, ".//div[@class='Order_ModalHeader__3FDaJ']")
     LOCATOR_STATUS = (By.XPATH, "//div[@class = 'Order_NextButton__1_rCA']/button[text()='Посмотреть статус']")
 
+
+
+
+class BasePageLocators:
+
     ''' Локаторы "Самокат" и "Яндекс "'''
 
     LOCATOR_MAIN = (By.XPATH, "//img[@alt='Scooter']")
     MAIN_LOGO = (By.XPATH, "//div[@class = 'Home_Header__iJKdX']")
     LOCATOR_YANDEX = (By.XPATH, "//img[@alt='Yandex']")
     LOGO_DZEN = (By.XPATH, ".//a[@class = 'dzen-header-desktop__logoContainer-1Y']")
+
+    BUTTON_ORDER_HEAD = (By.XPATH, ".//div[@class = 'Header_Nav__AGCXC']/button[text()='Заказать']")  # Кнопка "Заказать" наверху старницы
+    FORM_ORDER = (By.XPATH, ".//div[text()='Для кого самокат']")  # Форма заказ
 
 
 

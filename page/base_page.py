@@ -4,7 +4,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class BasePage:
 
-    @allure.step('Открываем браузер Mozilla Firefox')
+
     def __init__(self, driver):
         self.driver = driver
 
@@ -21,19 +21,31 @@ class BasePage:
     def click_element(self, locator):
         self.driver.find_element(*locator).click()
 
-    @allure.step('Текст элемента')
+    @allure.step('Получить текст элемента')
     def find_element_text(self, locator):
         return self.driver.find_element(*locator).text
 
-    @allure.step('Скролл до раздела "Вопросы о важном"')
+    @allure.step('Скролл до элемента')
     def scroll_to_element(self, locator):
-        faq = self.driver.find_element(*locator)
-        self.driver.execute_script("arguments[0].scrollIntoView();", faq)
+        element = self.driver.find_element(*locator)
+        self.driver.execute_script("arguments[0].scrollIntoView();", element)
         WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(locator))
 
 
     def wait_for_page_load(self, url):
         WebDriverWait(self.driver, 20).until(EC.url_to_be(url))
+
+    @allure.step('Ввод данных')
+    def input_element(self, locator, text):
+        self.driver.find_element(*locator).send_keys(text)
+
+    def new_window(self):
+        new_window = self.driver.switch_to.window(self.driver.window_handles[-1])
+        return
+
+    def current_url(self):
+        current_url = self.driver.current_url
+        return current_url
 
 
 

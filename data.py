@@ -15,7 +15,6 @@ class Answers:
     answer7 = "Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои."
     answer8 = "Да, обязательно. Всем самокатов! И Москве, и Московской области."
 
-
 class DataForm:
 
     ''' Форма заказа '''
@@ -23,11 +22,10 @@ class DataForm:
     fake = Faker(locale="ru_RU")
     USER_FIRST_NAME = fake.first_name()
     USER_LAST_NAME = fake.last_name()
-    USER_ADDRESS = 'Москва'  #fake.address()
+    USER_ADDRESS = 'Москва'
     USER_PHONE = random.randint(79000000000, 79999999999)
     DATE_TIME = datetime.date.today().strftime('%d.%m.%Y')
     COMMENT = 'ТЕСТ'
-
 
     ''' Логотип в шапке '''
 
@@ -45,9 +43,3 @@ class DataFormIncorrect:
     TEXT_NEGATIVE_LAST_NAME = 'Введите корректную фамилию'
     TEXT_NEGATIVE_ADRESS = 'Введите корректный адрес'
     TEXT_NEGATIVE_PHONE_NUMBER = 'Введите корректный номер'
-
-
-
-
-
-
